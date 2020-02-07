@@ -1,0 +1,36 @@
+<html>
+
+<head>
+    <script type="text/javaScript" src="changebackground.js"></script>
+    <style>
+        body {
+            background-color: powderblue;
+        }
+
+        .backgoundImage {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        img:hover {
+            -webkit-transform: scaleX(-1);
+            transform: scaleX(-1);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="container">
+        <button onclick="shuffleArray()">Shuffle</button>
+        <button onclick="deleteArray()">Delete</button>
+        <div class="backgoundImage">
+            <script>displayAllImages();</script>
+        </div>
+    </div>
+
+</body>
+
+</html>
