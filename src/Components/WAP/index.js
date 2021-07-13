@@ -1,14 +1,16 @@
 import React, { Fragment } from "react";
-import { countInstance } from "./CountInstance";
-import { reverse } from "./ReverseArray";
 
 const WAP = () => {
-  // reverse()
-  countInstance()
+  // const  bruh = (x) =>{
+  //   return function (y){
+  //     return x*y
+  //   }
+  // }
+  // console.log(bruh(1)(2)(3))
   //main return
   return (
     <Fragment>
-      <h1>Java Script..........</h1>
+      <h1>JSclear...............</h1>
     </Fragment>
   );
 };

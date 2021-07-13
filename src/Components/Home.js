@@ -29,6 +29,12 @@ const Home = () => {
         <li>
           <Link to="/WAP">WAP</Link>
         </li>
+        <li>
+          <Link to="/bubbling">Event Bubbling</Link>
+        </li>
+        <li>
+          <Link to="/memo">Memo</Link>
+        </li>
       </ul>
     </div>
   );

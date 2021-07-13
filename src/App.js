@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useEffect, useRef, useState } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "./Components/Home";
 import Debouncing from "./Components/Debouncing";
@@ -9,8 +9,23 @@ import CallBackAndEvents from "./Components/CallbackFunction";
 import EventLoop from "./Components/EventLoop";
 import SetTimeout from "./Components/SetTimeout";
 import WAP from "./Components/WAP";
+import Bubbling from "./Components/Bubbling&Capturing";
+import Memo from "./Components/Memo";
 
 const App = () => {
+  // const [count, setCount] = useState(1);
+
+  // const prevCountRef = useRef();
+  // useEffect(() => {
+  //   prevCountRef.current = count;
+  // });
+  // const prevCount = prevCountRef.current;
+
+  // return (
+  //   <h1>
+  //     Now: {count}, before: {prevCount}
+  //   </h1>
+  // );
   return (
     <Router>
       <Fragment>
@@ -42,10 +57,15 @@ const App = () => {
           <Route exact path="/WAP">
             <WAP />
           </Route>
+          <Route exact path="/bubbling">
+            <Bubbling />
+          </Route>
+          <Route exact path="/memo">
+            <Memo />
+          </Route>
         </Switch>
       </Fragment>
     </Router>
-    // </OptimizelyProvider>
   );
 };
 
