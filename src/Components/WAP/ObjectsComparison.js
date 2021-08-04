@@ -17,7 +17,4 @@ export const compareObjects = function (o1, o2) {
   return true;
 };
 
-console.log({} == {}); //false
-console.log({} === {}); //false
-console.log([] == []); //false
-console.log([] === []); //false
+

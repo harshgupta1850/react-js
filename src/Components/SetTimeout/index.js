@@ -5,7 +5,9 @@ const SetTimeout = () => {
     console.log("Call back with timeout");
   }
   setTimeout(cb, 4000);
-//   console.log
+
+  function a () {console.log('50000')}
+  setInterval(a,5000) //both wait for 5 sec after that only only they will console
   let todayDate= new Date().getTime()
   let endDate = todayDate
   console.log(endDate)
