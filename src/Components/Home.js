@@ -35,6 +35,9 @@ const Home = () => {
         <li>
           <Link to="/memo">Memo</Link>
         </li>
+        <li>
+          <Link to="/context">Context</Link>
+        </li>
       </ul>
     </div>
   );

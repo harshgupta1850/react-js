@@ -11,6 +11,7 @@ import SetTimeout from "./Components/SetTimeout";
 import WAP from "./Components/WAP";
 import Bubbling from "./Components/Bubbling&Capturing";
 import Memo from "./Components/Memo";
+import ComponentA from "./Components/Context/ComponentA";
 
 const App = () => {
   // const [count, setCount] = useState(1);
@@ -62,6 +63,9 @@ const App = () => {
           </Route>
           <Route exact path="/memo">
             <Memo />
+          </Route>
+          <Route exact path="/context">
+            <ComponentA />
           </Route>
         </Switch>
       </Fragment>
