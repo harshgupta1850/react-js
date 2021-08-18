@@ -39,8 +39,27 @@ const Functions = () => {
   function firstClass(param1) {
     console.log(param1, "first class");
   }
-  firstClass(x);  
-  
+  firstClass(x);
+  const radius = [1, 2, 4, 3];
+  const area = function (r) {
+    return Math.PI * r * r;
+  };
+
+  const diameter = function (r){
+    return 2*r
+  }
+
+  Array.prototype.calculate = function (logic) {
+    const output = [];
+    for (let i = 0; i < this.length; i++) {
+      output.push(logic(this[i]));
+    }
+    return output;
+  };
+
+  console.log(radius.calculate(diameter))
+
+
   //main return
   return (
     <Fragment>
