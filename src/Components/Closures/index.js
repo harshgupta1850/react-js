@@ -72,20 +72,25 @@ const Closures = () => {
   garbage()();
 
   const add = (function () {
-    let counter = 0
+    let counter = 0;
     return function () {
-    counter+=1 
-    return counter
-    }
-    })()
-    
-    console.log(add())
-    console.log(add())
-    
+      counter += 1;
+      return counter;
+    };
+  })();
+
+  console.log(add());
+  console.log(add());
 
   //main return
   return (
     <Fragment>
+      <div>
+        <div id="container">
+          <title>Harsh</title>
+        </div>
+      </div>
+
       <h1>Closures</h1>
       {closureFunction()}
     </Fragment>

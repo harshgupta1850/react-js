@@ -27,3 +27,32 @@ const user = {
 const finalObject = {};
 let keyName = "user";
 flatObject(user, finalObject, keyName);
+
+
+
+
+const flatObj = {
+  name: "Harsh",
+  place: {
+    home: {
+      personal: {
+        city: "up",
+      },
+    },
+  },
+};
+
+const flatten = (obj) => {
+  let finalObj = {};
+  for (var item in obj) {
+    //   console.log(item)
+    if (typeof obj[item] === "object") {
+      finalObj = { ...finalObj, ...flatten(obj[item]) };
+    } else {
+      finalObj[item] = obj[item];
+    }
+  }
+  return finalObj;
+};
+
+console.log(flatten(flatObj));

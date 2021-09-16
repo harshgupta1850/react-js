@@ -23,6 +23,7 @@ const Debouncing = () => {
     <Fragment>
       <h1>Debouncing</h1>
       <input type="text" onChange={onInputChange} />
+      <h1>Throttling</h1>
     </Fragment>
   );
 };
