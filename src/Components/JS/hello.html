@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+		div {
+			border: 1px  solid  black;
+		}
+	</style>
+</head>
+<body id="div-body">
+    <h1 id='scrollNumber'></h1>
+        First Name : <input id='first' name='Name'/>
+    <h1 id='counts'></h1>
+    <button onclick="onSubmit()">Submit</button>
+    <input type='radio' id='personal' name='add' value='personal'/>Personal
+    <input type='radio' id='local' name='add' value='local'/> Local
+    <h3 id="disp" style= "color:green"> </h3>  
+    <div >
+        <p style="background-color: red; height: 700px">This is line 1</p>
+        <p style="background-color: blue; height: 700px">This is line 2</p>
+        <p style="background-color: green; height: 700px">This is line 3</p>
+        <p style="background-color: yellow; height: 700px">This is line 4</p>
+    </div>
+    <script>
+var personalValue = document.getElementById("personal");
+var localalue = document.getElementById("local");
+
+//scrollling
+var  divBodyDom  =  document.getElementById('div-body');
+window.addEventListener('scroll', function () {
+	console.log('scrolles')
+},false)
+var countOfScroll = 0;
+
+//debouncing
+var timer;
+var nameValue = document.getElementById("first");
+function debounce(param1, time) {
+  clearTimeout(timer);
+  timer = setTimeout(() => {
+    console.log("api", param1);
+  }, time);
+}
+var noOfCount = 0;
+nameValue.addEventListener(
+  "input",
+  (e) => {
+    var regex = /^\d{5}$/;
+    noOfCount = noOfCount + 1;
+    console.log(regex.test(nameValue.value), "reg");
+    document.getElementById("counts").innerHTML = noOfCount;
+    debounce(nameValue.value, 1000);
+  },
+  false
+);
+
+//input event
+personalValue.addEventListener(
+  "input",
+  (e) => {
+    console.log(personalValue.checked);
+    if (personalValue.checked) {
+      document.getElementById("disp").innerHTML = personalValue.value;
+    }
+    //    if(personalValue.checked)
+    // debounce(nameValue.value,1000)
+  },
+  false
+);
+
+// console.log(nameValue, "name");
+function onSubmit() {
+  console.log(nameValue.value);
+}
+
+</script>
+</body>
+</html>
