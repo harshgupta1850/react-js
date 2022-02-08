@@ -6,7 +6,7 @@ const Debouncing = () => {
   const debounce = (fn, time) => {
     clearTimeout(timer);
     timer = setTimeout(() => {
-      fn();
+            fn();
     }, time);
   };
 

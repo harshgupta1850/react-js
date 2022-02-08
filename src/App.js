@@ -12,10 +12,11 @@ import WAP from "./Components/WAP";
 import Bubbling from "./Components/Bubbling&Capturing";
 import Memo from "./Components/Memo";
 import ComponentA from "./Components/Context/ComponentA";
+import DSAAlgoSumArray from "./Components/DSAAlgoSumArray";
+import DSAAlgo2Fibnocaii from "./Components/DSAAlgo2Fibnocaii";
 
 const App = () => {
   // const [count, setCount] = useState(1);
-
   // const prevCountRef = useRef();
   // useEffect(() => {
   //   prevCountRef.current = count;
@@ -67,6 +68,14 @@ const App = () => {
           <Route exact path="/context">
             <ComponentA />
           </Route>
+          <Route exact path="/dSAAlgosumarray">
+            <DSAAlgoSumArray/>
+          </Route>
+          <Route exact path="/DSAAlgo2Fibnocaii">
+            <DSAAlgo2Fibnocaii/>
+          </Route>
+
+          
         </Switch>
       </Fragment>
     </Router>
