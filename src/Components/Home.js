@@ -38,6 +38,12 @@ const Home = () => {
         <li>
           <Link to="/context">Context</Link>
         </li>
+        <li>
+          <Link to="/dSAAlgosumarray">DSAAlgosumarray</Link>
+        </li>
+        <li>
+          <Link to="/DSAAlgo2Fibnocaii">DSAAlgo2Fibnocaii</Link>
+        </li>
       </ul>
     </div>
   );
