@@ -2,6 +2,7 @@ import React, { Fragment } from "react";
 
 const DSAAlgoSumArray = () => {
 
+    //array
     const runningSum = (nums) => {
         let arr = [];
         let sum = 0;
